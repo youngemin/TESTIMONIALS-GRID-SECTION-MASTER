@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//  Primary
+
+  $Purple50: hsl(260, 100%, 95%);
+  $Purple300: hsl(264, 82%, 80%);
+  $Purple500: hsl(263, 55%, 52%);
+
+//  Neutral
+
+ $White: hsl(0, 0%, 100%);
+ $Grey100: hsl(214, 17%, 92%);
+ $Grey200: hsl(0, 0%, 81%);
+ $Grey400: hsl(224, 10%, 45%);
+ $Grey500: hsl(217, 19%, 35%);
+ $Darkblue: hsl(219, 29%, 14%);
+ $Black:hsl(0, 0%, 7%);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed';
+}
+ body{
+  background-color: $Purple50;
+  padding: 5em 1em;
+ }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  article{
+    max-width: 375px;
+  }
+}
+
+.daniel{
+  background-color: $Purple500;
+  border-radius: 10px;
+  padding: 2em 1.5em 2em 1.5em;
+  &__title{
+    color: $White;
+    font-weight: 500;
+    padding: 1em 1.5em 1em 0em;
+    font-size: 23px;
+    line-height: 28px;
+  }
+   &__desc{
+    color: $Grey100;
+    width: 290px;
+   }
+}
+.daniel__header{
+    display: flex;
+    align-items: center;
+    &_name{
+      color: $Grey100;
+      font-size: 13px;
+    }
+    img{
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      margin-right: 1em;
+      border: 1px solid $Grey100  ;
+      }
+}
+
+.jonathan{
+  background-color: $Grey500;
+  border-radius: 10px;
+  padding: 2em 1.5em 2em 1.5em;
+  &__header{
+    display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
+    color: $Grey100;
+    align-items: center;
+    img{
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+    }
+    &_name{
+      color: $Grey100;
+      font-size: 16px;
+      margin-bottom:5px;
+    }
+    &_status{
+      color: $Grey200;
+      font-size: 13px;
+    }
+  }
+  &__content{
+  &_title{
+    color: $White;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 0.7em;
+    font-size: 1.5em;
+  }
+  &_desc{
+    color: $Grey200;
+    font-size: 15px;
+  }
+  }
+ 
+}
