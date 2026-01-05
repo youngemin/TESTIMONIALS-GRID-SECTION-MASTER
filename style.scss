@@ -24,7 +24,7 @@
 }
  body{
   background-color: $Purple50;
-  padding: 5em 1em;
+  padding: 5em 2em;
  }
 
 .container{
@@ -33,61 +33,69 @@
   align-items: center;
   gap: 2em;
   article{
-    max-width: 375px;
+    max-width: 355px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 25px rgba(0,0,0,0.15);
   }
 }
 
 .daniel{
   background-color: $Purple500;
-  border-radius: 10px;
-  padding: 2em 1.5em 2em 1.5em;
+  padding: 2em 2.7em 1.5em 2em;
   &__title{
     color: $White;
     font-weight: 500;
-    padding: 1em 1.5em 1em 0em;
-    font-size: 23px;
+    font-size: 21px;
     line-height: 28px;
+    margin-bottom: 1em;
   }
    &__desc{
     color: $Grey100;
-    width: 290px;
+    font-size: 14px;
+    line-height: 18px;
    }
 }
 .daniel__header{
     display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
     align-items: center;
     &_name{
       color: $Grey100;
-      font-size: 13px;
+      font-size: 14px;
+      margin-bottom:5px;
     }
+     &_status{
+      color: $Grey200;
+      font-size: 13px;
+     }
     img{
       border-radius: 50%;
-      width: 33px;
-      height: 33px;
-      margin-right: 1em;
+      width: 35px;
+      height: 35px;
       border: 1px solid $Grey100  ;
       }
 }
 
 .jonathan{
   background-color: $Grey500;
-  border-radius: 10px;
-  padding: 2em 1.5em 2em 1.5em;
+  padding: 2em 2em 2em 1.5em;
   &__header{
     display: flex;
     padding-bottom: 1em;
     gap: 1em;
-    color: $Grey100;
     align-items: center;
     img{
       width: 33px;
       height: 33px;
       border-radius: 50%;
+      border: 1px solid $Grey100  ;
     }
     &_name{
       color: $Grey100;
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom:5px;
+      font-weight: 500;
     }
     &_status{
       color: $Grey200;
@@ -95,17 +103,158 @@
     }
   }
   &__content{
-  &_title{
+
+   &_title{
     color: $White;
     font-weight: 500;
     line-height: 25px;
+    font-size:10px;
     margin-bottom: 0.7em;
     font-size: 1.5em;
-  }
-  &_desc{
+    }
+    &_desc{
     color: $Grey200;
     font-size: 15px;
-  }
+    line-height: 22px;
+   }
   }
  
+}
+.jeanette{
+  background-color: $White;
+   padding: 2em 2em 2em 2em;
+  &__header{
+    display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
+    align-items: center;
+  img{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+  }
+  &_name{
+      color: $Grey500;
+      font-size: 16px;
+      margin-bottom:5px;
+      font-weight: 500;
+    
+  }
+  &_status{
+      color: $Grey500;
+      font-size: 14px;
+      font-weight: 500;
+  }
+  }
+  &__title{
+    color: $Grey500;
+    font-size: 22px;
+    margin-bottom: 0.5em;
+  }
+  &__desc{
+    color: $Grey500;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.patrick{
+  background-color: $Darkblue;
+  padding: 2em 2.5em 2em 2em;
+  color: $Grey200;
+  &__header{
+    display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
+    align-items: center;
+    img{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 2px solid $Purple500;
+  }
+   &_name{
+      color: $Grey200;
+      font-size: 16px;
+      margin-bottom:5px;
+      font-weight: 500;
+    
+  }
+  &_status{
+      color: $Grey200;
+      font-size: 14px;
+      font-weight: 500;
+  }
+  }
+    &__title{
+    color: $Grey200;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+  &__desc{
+    color: $Grey200;
+    font-size: 15px;
+    line-height: 1.4em;
+  }
+
+}
+
+.kira {
+  background-color: $White;
+  padding: 2em 2em 2em 2.5em;
+  color: $Grey500;
+  &__header{
+    display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
+    align-items: center;
+    img{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    
+  }
+  &_name{
+      color: $Grey500;
+      font-size: 16px;
+      margin-bottom:3px;
+      font-weight: 600;
+    
+  }
+  &_status{
+      color: $Grey200;
+      font-size: 14px;
+  }
+}
+    &__title{
+    color: $Grey500;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  &__desc{
+    color: $Grey400;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4em;
+  }
+}
+
+@media (min-width:768px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  article{
+    max-width: 90%;
+    width: 1000px;
+  }
+  .daniel{
+    width: 1000px;
+  }
 }
