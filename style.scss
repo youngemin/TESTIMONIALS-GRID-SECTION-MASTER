@@ -33,7 +33,6 @@
   align-items: center;
   gap: 2em;
   article{
-    max-width: 355px;
     border-radius: 10px;
     box-shadow: 12px 12px 25px rgba(0,0,0,0.15);
   }
@@ -46,7 +45,7 @@
     color: $White;
     font-weight: 500;
     font-size: 21px;
-    line-height: 28px;
+    line-height: 22px;
     margin-bottom: 1em;
   }
    &__desc{
@@ -108,14 +107,14 @@
     color: $White;
     font-weight: 500;
     line-height: 25px;
-    font-size:10px;
+    font-size:22px;
     margin-bottom: 0.7em;
     font-size: 1.5em;
     }
     &_desc{
     color: $Grey200;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 18px;
    }
   }
  
@@ -154,7 +153,7 @@
   &__desc{
     color: $Grey500;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -191,11 +190,12 @@
     font-size: 23px;
     font-weight: 500;
     margin-bottom: 1em;
+    line-height: 22px;
   }
   &__desc{
     color: $Grey200;
     font-size: 15px;
-    line-height: 1.4em;
+    line-height: 18px;
   }
 
 }
@@ -232,29 +232,46 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 1em;
+    line-height: 22px;
   }
   &__desc{
     color: $Grey400;
     font-size: 15px;
     font-weight: 500;
-    line-height: 1.4em;
+    line-height: 18px;
   }
 }
 
 @media (min-width:768px) {
   .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 2em;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    row-gap: 0;
+    column-gap: 2em;
+    max-width: 75rem;
     margin: 0 auto;
+    place-content: center;
+    grid-template-rows: auto auto;
   }
-  article{
-    max-width: 90%;
-    width: 1000px;
+  
+  
+  .daniel { 
+    grid-area: daniel; 
+    padding-bottom: 2.5em;
   }
-  .daniel{
-    width: 1000px;
+  .jonathan { 
+    grid-area: jonathan;
+  }
+  .jeanette { 
+    grid-area: jeanette; 
+  }
+  .patrick {
+     grid-area: patrick; 
+    }
+  .kira {
+    grid-area: kira; 
   }
 }

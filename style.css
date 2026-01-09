@@ -18,7 +18,6 @@ body {
   gap: 2em;
 }
 .container article {
-  max-width: 355px;
   border-radius: 10px;
   box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.15);
 }
@@ -31,7 +30,7 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 500;
   font-size: 21px;
-  line-height: 28px;
+  line-height: 22px;
   margin-bottom: 1em;
 }
 .daniel__desc {
@@ -92,14 +91,14 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 500;
   line-height: 25px;
-  font-size: 10px;
+  font-size: 22px;
   margin-bottom: 0.7em;
   font-size: 1.5em;
 }
 .jonathan__content_desc {
   color: hsl(0, 0%, 81%);
   font-size: 15px;
-  line-height: 22px;
+  line-height: 18px;
 }
 
 .jeanette {
@@ -136,7 +135,7 @@ body {
 .jeanette__desc {
   color: hsl(217, 19%, 35%);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .patrick {
@@ -172,11 +171,12 @@ body {
   font-size: 23px;
   font-weight: 500;
   margin-bottom: 1em;
+  line-height: 22px;
 }
 .patrick__desc {
   color: hsl(0, 0%, 81%);
   font-size: 15px;
-  line-height: 1.4em;
+  line-height: 18px;
 }
 
 .kira {
@@ -210,28 +210,42 @@ body {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 1em;
+  line-height: 22px;
 }
 .kira__desc {
   color: hsl(224, 10%, 45%);
   font-size: 15px;
   font-weight: 500;
-  line-height: 1.4em;
+  line-height: 18px;
 }
 
 @media (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2em;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+    row-gap: 0;
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+    max-width: 75rem;
     margin: 0 auto;
-  }
-  article {
-    max-width: 90%;
-    width: 1000px;
+    place-content: center;
+    grid-template-rows: auto auto;
   }
   .daniel {
-    width: 1000px;
+    grid-area: daniel;
+    padding-bottom: 2.5em;
+  }
+  .jonathan {
+    grid-area: jonathan;
+  }
+  .jeanette {
+    grid-area: jeanette;
+  }
+  .patrick {
+    grid-area: patrick;
+  }
+  .kira {
+    grid-area: kira;
   }
 }/*# sourceMappingURL=style.css.map */
